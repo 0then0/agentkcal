@@ -15,6 +15,8 @@ Harassment, discriminatory abuse, threats, sexualized content directed at others
 
 Report concerns through a private repository contact channel where available. If no channel is available, request one in an issue without disclosing sensitive information publicly. Security vulnerabilities should follow the [security policy](SECURITY.md).
 
+Maintainers should handle reports discreetly, disclose details only as needed to investigate, and avoid conflicts of interest. Retaliation against a person who reports a concern in good faith is not acceptable. When practical, affected participants should have an opportunity to respond privately.
+
 Maintainers may edit or remove content and restrict participation in response to violations. Enforcement considers the behavior, its impact and the context. Good-faith technical disagreement is welcome.
 
 This policy applies to project issues, pull requests, reviews, discussions and other project interactions.

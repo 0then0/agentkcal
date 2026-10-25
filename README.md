@@ -94,6 +94,8 @@ npm run demo
 
 Open **http://127.0.0.1:8765**. The demo uses a temporary database, does not read your agent logs, and removes its data when stopped normally. Press **Ctrl+C** to stop the server.
 
+A prebuilt CLI archive and SHA-256 checksum are available in [GitHub Releases](https://github.com/0then0/AgentKcal/releases). [Version history](CHANGELOG.md).
+
 The examples below run directly from the repository. You can also [install the CLI from a package](docs/cli.md#install-the-cli).
 
 ## Track your usage
@@ -197,6 +199,7 @@ SQLite stores usage identifiers, UTC timestamps, model IDs, token counts and opt
 
 ## Documentation
 
+- [Changelog](CHANGELOG.md): released versions, compatibility notes and unreleased changes.
 - [CLI reference](docs/cli.md): commands, filters, exports and troubleshooting.
 - [Configuration](docs/configuration.md): data locations, source discovery and energy profiles.
 - [Agent integrations](docs/integrations.md): Claude status line, MCP and host commands.
@@ -222,6 +225,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for project structure, testing and contri
 ## Project status
 
 AgentKcal **0.1.x is alpha software**. Source formats can change. Imports rescan selected files, and reports load matching events into memory, so large histories can take time and memory. Deleted logs, incomplete counters, compacted histories and forks can affect completeness or create ambiguous identities. See [known accounting limitations](docs/adapters.md#identity-and-completeness).
-
 
 Licensed under [Apache-2.0](LICENSE). [Security policy](SECURITY.md) · [Code of conduct](CODE_OF_CONDUCT.md).

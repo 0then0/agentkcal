@@ -1,12 +1,21 @@
 name: Bug report
 description: Incorrect totals, source parsing, CLI or dashboard problems
+title: "[Bug]: "
 body:
+  - type: markdown
+    attributes:
+      value: Before reporting, check existing issues and the troubleshooting guide in docs/cli.md. Report security vulnerabilities through SECURITY.md; never attach private agent journals.
   - type: input
     id: version
     attributes:
       label: AgentKcal, Node.js and OS versions
     validations:
       required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and version, if applicable
+      placeholder: Claude Code, Codex, Gemini CLI, Cursor, OpenCode or Cline
   - type: textarea
     id: reproduce
     attributes:
@@ -23,3 +32,5 @@ body:
     id: expected
     attributes:
       label: Expected and actual totals or behavior
+    validations:
+      required: true

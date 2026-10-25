@@ -14,6 +14,8 @@ concurrency:
 
 jobs:
   test:
+    name: "${{ matrix.os }} / Node.js ${{ matrix.node }}"
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
@@ -25,13 +27,19 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: ${{ matrix.node }}
           cache: npm
-      - run: npm ci
-      - run: npm run check
-      - run: npm run typecheck
-      - run: npm test
-      - name: Install and verify packed CLI, MCP and dashboard away from checkout
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Lint and formatting
+        run: npm run check
+      - name: Type checking
+        run: npm run typecheck
+      - name: Build and regression tests
+        run: npm test
+      - name: Package installation, CLI, MCP and dashboard
         run: npm run test:package

@@ -1,3 +1,6 @@
+# Keep text checkouts on LF, including when core.autocrlf is enabled.
 * text=auto eol=lf
 
+# SVG assets remain reviewable as text; screenshots are binary.
+*.svg text
 *.png binary

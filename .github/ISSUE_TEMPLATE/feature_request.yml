@@ -1,6 +1,10 @@
 name: Feature or adapter request
 description: Suggest a focused capability or agent format
+title: "[Feature]: "
 body:
+  - type: markdown
+    attributes:
+      value: Check existing issues before requesting a feature. Explain the workflow and expected result; use synthetic examples for agent formats.
   - type: textarea
     id: problem
     attributes:

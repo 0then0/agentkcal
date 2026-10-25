@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation and setup
+    url: https://github.com/0then0/AgentKcal#documentation
+    about: Installation, source formats, configuration, agent integrations and estimation methodology.
+  - name: Report a security vulnerability
+    url: https://github.com/0then0/AgentKcal/blob/main/SECURITY.md
+    about: Follow the private reporting instructions. Do not post exploit details or private logs in a public issue.

@@ -27,7 +27,11 @@
     "LICENSE",
     "README.md",
     "integrations",
-    "README.ru.md"
+    "README.ru.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.web.json && node scripts/assets.ts",

@@ -42,6 +42,8 @@ npm run test:package
 
 `check` runs Biome for linting, formatting and import organization. `typecheck` checks server code, browser code and tests. `test` builds dashboard assets and runs the TypeScript suite using Node's test runner. `test:package` packs the application, installs it without development dependencies in a temporary directory, and exercises its CLI, MCP and dashboard.
 
+The root `.editorconfig` defines UTF-8, two-space indentation, a final newline and LF line endings. `.gitattributes` enforces LF in Git checkouts on every platform. Enable EditorConfig support in your editor; Biome remains the formatter and lint authority. Markdown trailing spaces are preserved because they can represent hard line breaks.
+
 Run `npm run format` to apply formatting and safe lint fixes. Integration Markdown templates are kept verbatim to preserve their YAML front matter. CSS rules allow component-specific cascade ordering and documented accessibility exceptions.
 
 CI runs the same checks on Linux, macOS and Windows, including the minimum supported Node.js version on Linux. Dependabot groups dependency updates monthly; review major upgrades separately.
@@ -62,9 +64,17 @@ Compact CLI/MCP translations live in `src/integrations/languages.ts`. Keep their
 
 ## Pull requests
 
-Explain the problem, the resulting behavior and relevant limitations. List the checks you ran and their outcomes. Update user-facing documentation when commands, source formats or configuration change.
+Explain the problem, the resulting behavior and relevant limitations. List the checks you ran and their outcomes. Update user-facing documentation when commands, source formats or configuration change. Add a concise entry under `Unreleased` in [CHANGELOG.md](CHANGELOG.md) for user-visible changes. Describe the effect on users rather than implementation steps.
+
+The [pull-request template](https://github.com/0then0/AgentKcal/blob/main/.github/PULL_REQUEST_TEMPLATE.md) lists relevant validation and compatibility details. A missing check should have a reason, not a fabricated passing result.
 
 Use Conventional Commits in English: `feat`, `fix`, `refactor`, `chore`, `docs` or `test`, for example `fix(adapters): deduplicate repeated usage snapshots`.
+
+## Releases
+
+Published versions and dates are listed in [CHANGELOG.md](CHANGELOG.md). Maintainers release a specific commit after its CI passes. Before publishing, ensure the package version, CLI version, installation examples and changelog agree; run the checks above, build with `npm pack`, and verify the installed archive. Attach the compiled archive and its SHA-256 checksum to a GitHub Release. Mark alpha releases as prereleases.
+
+Do not move an existing release tag or replace an archive with different contents. Publish a new version for subsequent fixes. A GitHub Release does not imply publication to the npm registry.
 
 ## License and project assets
 

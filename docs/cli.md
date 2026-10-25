@@ -9,7 +9,37 @@ node dist/cli.js --version
 
 ## Install the CLI
 
-From the repository:
+Download `agentkcal-0.1.0.tgz` and `SHA256SUMS` from the [v0.1.0 alpha release](https://github.com/0then0/AgentKcal/releases/tag/v0.1.0) into the same directory. Verify the archive before installing:
+
+macOS:
+
+```sh
+shasum -a 256 -c SHA256SUMS
+```
+
+Linux:
+
+```sh
+sha256sum -c SHA256SUMS
+```
+
+Windows PowerShell: compare the resulting hash with the matching entry in `SHA256SUMS`.
+
+```powershell
+Get-FileHash ./agentkcal-0.1.0.tgz -Algorithm SHA256
+```
+
+Then install the compiled package:
+
+```sh
+npm install --global ./agentkcal-0.1.0.tgz
+agentkcal --version
+agentkcal demo
+```
+
+The package is distributed through GitHub release assets. No npm registry installation is required. Use the asset name for the version you download; see [release history](../CHANGELOG.md).
+
+To build a package from the repository instead:
 
 ```sh
 npm ci

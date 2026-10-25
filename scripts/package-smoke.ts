@@ -62,7 +62,14 @@ try {
   ])
     assert.ok(existsSync(join(root, "dist/web", file)), file);
   assert.ok(existsSync(join(root, "integrations/skills/agentkcal/SKILL.md")));
-  assert.ok(existsSync(join(root, "README.ru.md")));
+  for (const file of [
+    "README.ru.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md",
+  ])
+    assert.ok(existsSync(join(root, file)), file);
   const data = join(folder, "data");
   run(
     "--data-dir",

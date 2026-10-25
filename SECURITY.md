@@ -4,7 +4,9 @@ AgentKcal is designed for one user's local machine. Its dashboard binds to `127.
 
 ## Supported versions
 
-Security fixes target the latest version in the `0.1.x` line. Update to the latest available release before reporting a problem with an older version.
+Security fixes target the latest published version in the `0.1.x` line, including alpha releases. Update to the latest available release before reporting a problem with an older version.
+
+Run `agentkcal --version` to identify the installed version. Download packages from [GitHub Releases](https://github.com/0then0/AgentKcal/releases) and verify their archive against the attached `SHA256SUMS`.
 
 ## Report a vulnerability
 
@@ -13,6 +15,7 @@ Use the repository's [private vulnerability reporting](https://github.com/0then0
 Include:
 - The affected AgentKcal version, Node.js version and operating system.
 - A minimal reproduction using synthetic data.
+- The affected interface: CLI import/export, local HTTP dashboard, status line or stdio MCP.
 - The expected access boundary and the observed impact.
 - Any relevant configuration with personal paths and identifiers removed.
 

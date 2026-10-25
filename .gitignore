@@ -39,6 +39,11 @@ coverage/
 *.lcov
 .playwright-mcp/
 
+# Editor backup files
+*.swp
+*.swo
+*~
+
 # Operating system files
 .DS_Store
 Thumbs.db
